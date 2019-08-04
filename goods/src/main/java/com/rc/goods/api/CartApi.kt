@@ -1,0 +1,15 @@
+package com.rc.goods.api
+
+import io.reactivex.Observable
+import retrofit2.http.GET
+
+/*
+    购物车 接口
+ */
+interface CartApi {
+    /*
+        获取购物车列表
+     */
+    @GET("Shieri/Purchase/master/goods/src/main/java/com/rc/goods/model/cart.json")
+    fun getCartList(): Observable<Cart>
+}

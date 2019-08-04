@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.rc.goods.R
+import com.rc.goods.model.Group
 import kotlinx.android.synthetic.main.item_shopping_car_child.view.*
 import kotlinx.android.synthetic.main.item_shopping_car_group.view.*
 import javax.inject.Inject
@@ -18,23 +19,22 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
 
     private val mcontext: Context? = null
 
-    var groupString = arrayOf("志高冰洗旗舰店", "美的旗舰店", "海尔旗舰店", "诺基亚旗舰店")
-
+   // var groupString = arrayOf("志高冰洗旗舰店", "美的旗舰店", "海尔旗舰店", "诺基亚旗舰店")
+    var groupString: List<Group>? = null
 
     var childString = arrayOf(
         arrayOf("时空房间啊链接法兰克福骄傲拉开飞机阿里进来撒劫匪了卡减肥了看见拉杀劫匪垃圾费垃圾费啦"),
         arrayOf("孙膑", "蔡文姬", "鬼谷子", "杨玉环"),
-        arrayOf("张飞", "廉颇", "牛魔", "项羽"),
-        arrayOf("诸葛亮", "王昭君", "安琪拉", "干将")
+        arrayOf("张飞", "廉颇", "牛魔", "项羽")
     )
 
-    fun setData() {
-
+    fun setData(group: List<Group>) {
+         this.groupString = group
         notifyDataSetChanged()
     }
 
     override fun getGroup(position: Int): Any {
-       return groupString[position]
+       return groupString?.get(position)!!
     }
 
     override fun isChildSelectable(p0: Int, p1: Int): Boolean {
@@ -63,7 +63,7 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
         } else {
             groupViewHolder = convertView.tag as GroupViewHolder
         }
-        groupViewHolder.tv_store_name!!.text = groupString[groupPosition]
+        groupViewHolder.tv_store_name!!.text = this!!.groupString?.get(groupPosition)?.name
         return convertView
     }
 
@@ -115,7 +115,8 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
     }
 
     override fun getGroupCount(): Int {
-         return groupString.size
+        // return groupString!!.size
+         return 3
     }
 
 

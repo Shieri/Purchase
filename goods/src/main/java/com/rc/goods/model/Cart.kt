@@ -1,10 +1,21 @@
 package com.rc.goods.model
 
 data class Cart(
-    val links: List<Link>
+    val group: List<Group>,
+    val child: List<Child>
 )
 
-data class Link(
-    val name: String,
-    val url: String
+data class Group(
+    val name: String
+)
+
+data class Child(
+    val id: Int,
+    val goodsCount: Int,
+    val goodsDesc: String,
+    val goodsIcon: String,
+    val goodsId: Int,
+    val goodsPrice: Double,
+    val goodsSku: String,
+    val isSelected: Boolean
 )

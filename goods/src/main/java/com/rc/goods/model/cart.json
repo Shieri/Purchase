@@ -11,6 +11,47 @@
     {
       "name": "诺基亚旗舰店"
     }
+  ],
+  "child": [{
+    "id": 147455667,
+    "goodsId": 10,
+    "goodsDesc": "goodsDesc",
+    "goodsIcon": "",
+    "goodsPrice": 123.00,
+    "goodsCount": 4,
+    "goodsSku": "dddd",
+    "isSelected": true
+  },
+    {
+      "id": 147455667,
+      "goodsId": 10,
+      "goodsDesc": "goodsDesc",
+      "goodsIcon": "",
+      "goodsPrice": 456.00,
+      "goodsCount": 4,
+      "goodsSku": "dddd",
+      "isSelected": true
+    },
+    {
+      "id": 147455667,
+      "goodsId": 10,
+      "goodsDesc": "goodsDesc",
+      "goodsIcon": "",
+      "goodsPrice": 789.00,
+      "goodsCount": 4,
+      "goodsSku": "dddd",
+      "isSelected": true
+    },
+    {
+      "id": 147455667,
+      "goodsId": 10,
+      "goodsDesc": "goodsDesc",
+      "goodsIcon": "vvvv",
+      "goodsPrice": 246.00,
+      "goodsCount": 6,
+      "goodsSku": "dddd",
+      "isSelected": false
+    }
   ]
 
 }
