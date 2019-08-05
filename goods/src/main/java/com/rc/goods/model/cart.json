@@ -1,57 +1,97 @@
-{
-  "group": [{
-    "name": "志高冰洗旗舰店"
-  },
-    {
-      "name": "美的旗舰店"
-    },
-    {
-      "name": "海尔旗舰店"
-    },
-    {
-      "name": "诺基亚旗舰店"
-    }
-  ],
+[{
+  "name": "志高冰洗旗舰店",
   "child": [{
-    "id": 147455667,
-    "goodsId": 10,
-    "goodsDesc": "goodsDesc",
-    "goodsIcon": "",
-    "goodsPrice": 123.00,
-    "goodsCount": 4,
-    "goodsSku": "dddd",
+    "id": 1,
+    "goodsCount": 200,
+    "goodsDesc": "4正确的JSON",
+    "goodsIcon": "goodsIcon",
+    "goodsId": 40,
+    "goodsPrice": 35.50,
+    "goodsSku": "sku4",
     "isSelected": true
   },
     {
-      "id": 147455667,
-      "goodsId": 10,
-      "goodsDesc": "goodsDesc",
-      "goodsIcon": "",
-      "goodsPrice": 456.00,
-      "goodsCount": 4,
-      "goodsSku": "dddd",
-      "isSelected": true
-    },
-    {
-      "id": 147455667,
-      "goodsId": 10,
-      "goodsDesc": "goodsDesc",
-      "goodsIcon": "",
-      "goodsPrice": 789.00,
-      "goodsCount": 4,
-      "goodsSku": "dddd",
-      "isSelected": true
-    },
-    {
-      "id": 147455667,
-      "goodsId": 10,
-      "goodsDesc": "goodsDesc",
-      "goodsIcon": "vvvv",
-      "goodsPrice": 246.00,
-      "goodsCount": 6,
-      "goodsSku": "dddd",
+      "id": 42,
+      "goodsCount": 321,
+      "goodsDesc": "42正确的JSON",
+      "goodsIcon": "goodsIcon",
+      "goodsId": 41,
+      "goodsPrice": 35.50,
+      "goodsSku": "sku4",
       "isSelected": false
     }
   ]
-
-}
+},
+  {
+    "name": "美的旗舰店",
+    "child": [{
+      "id": 3,
+      "goodsCount": 200,
+      "goodsDesc": "4正确的JSON",
+      "goodsIcon": "goodsIcon",
+      "goodsId": 40,
+      "goodsPrice": 35.50,
+      "goodsSku": "sku4",
+      "isSelected": true
+    },
+      {
+        "id": 42,
+        "goodsCount": 321,
+        "goodsDesc": "42正确的JSON",
+        "goodsIcon": "goodsIcon",
+        "goodsId": 41,
+        "goodsPrice": 35.50,
+        "goodsSku": "sku4",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "name": "海尔旗舰店",
+    "child": [{
+      "id": 3,
+      "goodsCount": 23,
+      "goodsDesc": "4正确的JSON",
+      "goodsIcon": "goodsIcon",
+      "goodsId": 40,
+      "goodsPrice": 35.50,
+      "goodsSku": "sku4",
+      "isSelected": true
+    },
+      {
+        "id": 3,
+        "goodsCount": 12,
+        "goodsDesc": "42正确的JSON",
+        "goodsIcon": "goodsIcon",
+        "goodsId": 41,
+        "goodsPrice": 32.50,
+        "goodsSku": "sku4",
+        "isSelected": true
+      }
+    ]
+  },
+  {
+    "name": "诺基亚旗舰店",
+    "child": [{
+      "id": 4,
+      "goodsCount": 200,
+      "goodsDesc": "4正确的JSON",
+      "goodsIcon": "goodsIcon",
+      "goodsId": 40,
+      "goodsPrice": 35.50,
+      "goodsSku": "sku4",
+      "isSelected": true
+    },
+      {
+        "id": 42,
+        "goodsCount": 321,
+        "goodsDesc": "42正确的JSON",
+        "goodsIcon": "goodsIcon",
+        "goodsId": 41,
+        "goodsPrice": 35.50,
+        "goodsSku": "sku4",
+        "isSelected": false
+      }
+    ]
+  }
+]

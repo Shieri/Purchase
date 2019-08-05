@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
 import com.rc.goods.R
+import com.rc.goods.model.Cart
+import com.rc.goods.model.Child
 import com.rc.goods.model.Group
 import kotlinx.android.synthetic.main.item_shopping_car_child.view.*
 import kotlinx.android.synthetic.main.item_shopping_car_group.view.*
@@ -19,8 +21,11 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
 
     private val mcontext: Context? = null
 
-   // var groupString = arrayOf("志高冰洗旗舰店", "美的旗舰店", "海尔旗舰店", "诺基亚旗舰店")
-    var groupString: List<Group>? = null
+    var groupString = arrayOf("志高冰洗旗舰店", "美的旗舰店", "海尔旗舰店", "诺基亚旗舰店")
+/*
+    lateinit var groupString: List<Group>
+    lateinit var childString: List<Child>
+*/
 
     var childString = arrayOf(
         arrayOf("时空房间啊链接法兰克福骄傲拉开飞机阿里进来撒劫匪了卡减肥了看见拉杀劫匪垃圾费垃圾费啦"),
@@ -28,9 +33,12 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
         arrayOf("张飞", "廉颇", "牛魔", "项羽")
     )
 
-    fun setData(group: List<Group>) {
-         this.groupString = group
-        notifyDataSetChanged()
+    //数据集合
+    var dataList: MutableList<Cart> = mutableListOf()
+
+    fun setData(cart: MutableList<Cart>) {
+         dataList = cart
+         notifyDataSetChanged()
     }
 
     override fun getGroup(position: Int): Any {
@@ -63,20 +71,22 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
         } else {
             groupViewHolder = convertView.tag as GroupViewHolder
         }
-        groupViewHolder.tv_store_name!!.text = this!!.groupString?.get(groupPosition)?.name
+        //groupViewHolder.tv_store_name!!.text = this!!.groupString?.get(groupPosition)?.name
+        groupViewHolder.tv_store_name!!.text = "eeee"
         return convertView
     }
 
     //获取指定分组中的子选项的个数
     override fun getChildrenCount(groupPosition: Int): Int {
-        return childString[groupPosition].size
+     //   return childString!!.size
+        return 4
 
     }
 
 
     //获取指定分组中的指定子选项数据
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        return childString[groupPosition][childPosition]
+        return childString!!.get(groupPosition)
     }
 
     override fun getGroupId(groupPosition: Int): Long {
@@ -105,7 +115,8 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
         } else {
             childViewHolder = convertView.tag as ChildViewHolder
         }
-        childViewHolder.tvName!!.text =childString[groupPosition][childPosition]
+       // childViewHolder.tvName!!.text =this!!.childString?.get(groupPosition)?.goodsDesc
+        childViewHolder.tvName!!.text = "this"
         return convertView
     }
 
@@ -115,8 +126,10 @@ class CartExpandableListAdapter @Inject constructor(): BaseExpandableListAdapter
     }
 
     override fun getGroupCount(): Int {
-        // return groupString!!.size
-         return 3
+
+
+        return 4
+
     }
 
 

@@ -33,12 +33,6 @@ class CartFragment @Inject constructor(): BaseFragment(){
     override fun initView(view: View) {
 
 
-
-
-    }
-
-    override fun initListener() {
-
         RetrofitFactory.getInstance("https://raw.githubusercontent.com/").create(CartApi::class.java)
             .getCartList()
             .subscribeOn(Schedulers.io())
@@ -46,8 +40,7 @@ class CartFragment @Inject constructor(): BaseFragment(){
             .subscribe(Consumer {
 
                 //  Log.d("eee",it.toString())
-
-                mCartExpandableListAdapter.setData(it.group)
+                mCartExpandableListAdapter.setData(it)
             })
 
         mExpandableListView.setAdapter(mCartExpandableListAdapter)
@@ -70,23 +63,29 @@ class CartFragment @Inject constructor(): BaseFragment(){
 
         // setOnChildClickListener listener for child row click
         mExpandableListView.setOnChildClickListener(ExpandableListView.OnChildClickListener { parent, v, groupPosition, childPosition, id ->
-              Toast.makeText(activity,"OnChildClickListener",Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,"OnChildClickListener",Toast.LENGTH_LONG).show()
             true
         })
 
 
         titlebar_3.setListener(CommonTitleBar.OnTitleBarListener { v, action, extra ->
             if(action == CommonTitleBar.ACTION_RIGHT_TEXT){
-               if(titlebar_3.rightTextView.text.equals(mCartExpandableListAdapter.EDITING)){
+                if(titlebar_3.rightTextView.text.equals(mCartExpandableListAdapter.EDITING)){
 
-                   titlebar_3.rightTextView.setText(mCartExpandableListAdapter.FINISH_EDITING)
+                    titlebar_3.rightTextView.setText(mCartExpandableListAdapter.FINISH_EDITING)
 
-               }else{
-                   titlebar_3.rightTextView.setText(mCartExpandableListAdapter.EDITING)
-               }
+                }else{
+                    titlebar_3.rightTextView.setText(mCartExpandableListAdapter.EDITING)
+                }
             }
 
         })
+
+    }
+
+    override fun initListener() {
+
+
 
 
     }

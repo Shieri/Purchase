@@ -42,6 +42,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 
+    api 'me.jessyan:autosize:1.1.2'
     // RxKotlin and RxAndroid
     api 'io.reactivex.rxjava2:rxkotlin:2.2.0'
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
