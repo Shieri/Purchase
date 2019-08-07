@@ -1,17 +1,16 @@
 package com.rc.goods.model
 
 data class Cart(
-    val child: List<Child>,
-    val name: String
+    val area_name: String,
+    val cinemas: List<Cinema>,
+    val id: Int
 )
 
-data class Child(
-    val goodsCount: Int,
-    val goodsDesc: String,
-    val goodsIcon: String,
-    val goodsId: Int,
-    val goodsPrice: Double,
-    val goodsSku: String,
-    val id: Int,
-    val isSelected: Boolean
+data class Cinema(
+    val area_id: String,
+    val area_name: String,
+    val cinema_address: String,
+    val cinema_name: String,
+    val id: String,
+    val logo: String
 )

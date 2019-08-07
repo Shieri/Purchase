@@ -16,8 +16,8 @@
 
 package com.base.mvp
 
-interface BaseView<T> {
+interface BaseView {
 
-    fun setPresenter(presenter: T)
+    //fun setPresenter(presenter: T)
 
 }

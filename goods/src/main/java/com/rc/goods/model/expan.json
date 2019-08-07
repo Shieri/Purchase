@@ -1,0 +1,69 @@
+[{
+  "id": 117,
+  "area_name": "昌平区",
+  "cinemas": [{
+    "id": "1",
+    "cinema_name": "DMC昌平保利影剧院",
+    "cinema_address": "昌平区鼓楼南街佳莲时代广场4楼",
+    "area_id": "117",
+    "area_name": "昌平区",
+    "logo": "http://img.komovie.cn/cinema/14205106672446.jpg"
+  }, {
+    "id": "2",
+    "cinema_name": "保利国际影城-龙旗广场店",
+    "cinema_address": "昌平区黄平路19号院3号楼龙旗购物中心3楼",
+    "area_id": "117",
+    "area_name": "昌平区",
+    "logo": "http://img.komovie.cn/cinema/14203529883434.jpg"
+  }]
+}, {
+  "id": 109,
+  "area_name": "朝阳区",
+  "cinemas": [{
+    "id": "7",
+    "cinema_name": "北京剧院",
+    "cinema_address": "朝阳区安慧里三区10号",
+    "area_id": "109",
+    "area_name": "朝阳区",
+    "logo": "http://img.komovie.cn/cinema/14207675478321.jpg"
+  }, {
+    "id": "8",
+    "cinema_name": "朝阳剧场",
+    "cinema_address": "朝阳区东三环北路36号",
+    "area_id": "109",
+    "area_name": "朝阳区",
+    "logo": "http://img.komovie.cn/cinema/14203512065410.jpg"
+  }, {
+    "id": "10",
+    "cinema_name": "劲松电影院",
+    "cinema_address": "朝阳区劲松中街404号",
+    "area_id": "109",
+    "area_name": "朝阳区",
+    "logo": "http://img.komovie.cn/cinema/14213800192810.jpg"
+  }]
+}, {
+  "id": 110,
+  "area_name": "丰台区",
+  "cinemas": [{
+    "id": "67",
+    "cinema_name": "保利国际影城-大峡谷店",
+    "cinema_address": "丰台区南三环西路首地大峡谷购物中心5楼",
+    "area_id": "110",
+    "area_name": "丰台区",
+    "logo": "http://img.komovie.cn/cinema/14203575287090.jpg"
+  }, {
+    "id": "68",
+    "cinema_name": "保利国际影城-万源店",
+    "cinema_address": "丰台区东高地万源北路航天万源广场5楼",
+    "area_id": "110",
+    "area_name": "丰台区",
+    "logo": "http://img.komovie.cn/cinema/14203530487616.jpg"
+  }, {
+    "id": "69",
+    "cinema_name": "恒业国际影城-北京六里桥店",
+    "cinema_address": "北京市丰台区万丰路68号银座和谐广场购物中心5层\t",
+    "area_id": "110",
+    "area_name": "丰台区",
+    "logo": "http://img.komovie.cn/cinema/14203530487616.jpg"
+  }]
+}]

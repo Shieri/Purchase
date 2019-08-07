@@ -20,8 +20,13 @@ abstract class BaseFragment : Fragment() {
 
     @Nullable
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+
+      injectComponent()
       return inflater.inflate(contentView, container, false)
     }
+
+    abstract fun injectComponent()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,7 +38,7 @@ abstract class BaseFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        initData()
+     //   initData()
     }
 
 

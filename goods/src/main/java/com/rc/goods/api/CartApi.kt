@@ -14,4 +14,5 @@ interface CartApi {
     @GET("Shieri/Purchase/master/goods/src/main/java/com/rc/goods/model/cart.json")
     fun getCartList(): Observable<MutableList<Cart>>
 
+
 }

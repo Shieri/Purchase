@@ -16,8 +16,10 @@
 
 package com.base.mvp
 
-interface BasePresenter {
+interface BasePresenter<T> {
 
     fun start()
+
+    fun takeView(view:T)
 
 }
