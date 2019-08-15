@@ -122,7 +122,7 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
         val text = view!!.findViewById<View>(R.id.tv_name) as AppCompatTextView
         val textView = view.findViewById<AppCompatTextView>(R.id.tv_price_key)
        // text.setText(this!!.datasets!![PList!![parentPos]]!!.get(childPos).cinema_name)
-        text.setText("开发过程中，按照设计尺寸做好页面，当用户自定义自己的手机字体大小之后UI完全没法看了，这个时候就在想让app字体")
+   
        // textView.setText(this!!.datasets!![PList!![parentPos]]!!.get(childPos).cinema_address)
         textView.setText("33.00")
 
