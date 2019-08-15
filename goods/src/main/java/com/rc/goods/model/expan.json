@@ -1,13 +1,8 @@
-[{
-  "id": 117,
+[{"id": 117,
   "area_name": "昌平区",
+  "isChecked": true,
   "cinemas": [{
-    "id": "1",
-    "cinema_name": "DMC昌平保利影剧院",
-    "cinema_address": "昌平区鼓楼南街佳莲时代广场4楼",
-    "area_id": "117",
-    "area_name": "昌平区",
-    "logo": "http://img.komovie.cn/cinema/14205106672446.jpg"
+    "id": "1", "cinema_name": "DMC昌平保利影剧院","cinema_address": "昌平区鼓楼南街佳莲时代广场4楼","area_id": "117","area_name": "昌平区","logo": "http://img.komovie.cn/cinema/14205106672446.jpg"
   }, {
     "id": "2",
     "cinema_name": "保利国际影城-龙旗广场店",
@@ -44,6 +39,7 @@
 }, {
   "id": 110,
   "area_name": "丰台区",
+  "isChecked": true,
   "cinemas": [{
     "id": "67",
     "cinema_name": "保利国际影城-大峡谷店",

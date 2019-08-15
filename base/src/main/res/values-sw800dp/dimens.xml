@@ -23,6 +23,11 @@
 	<dimen name="dp40">88.8889dp</dimen>
 	<dimen name="dp42">93.3333dp</dimen>
 	<dimen name="dp50">111.1111dp</dimen>
+	<dimen name="dp60">133.3333dp</dimen>
+	<dimen name="dp70">155.5556dp</dimen>
+	<dimen name="dp80">177.7778dp</dimen>
+	<dimen name="dp90">200.0000dp</dimen>
+	<dimen name="dp100">222.2222dp</dimen>
 	<dimen name="textSize9">20.0000sp</dimen>
 	<dimen name="textSize10">22.2222sp</dimen>
 	<dimen name="textSize11">24.4444sp</dimen>

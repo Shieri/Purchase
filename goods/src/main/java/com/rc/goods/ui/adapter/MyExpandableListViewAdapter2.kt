@@ -1,20 +1,24 @@
 package com.rc.goods.ui.adapter
 
 import android.content.Context
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import android.widget.CheckBox
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
-import androidx.appcompat.widget.AppCompatTextView
 import com.rc.goods.R
+import com.rc.goods.model.ChildEntity
 import com.rc.goods.model.Cinema
 import java.util.HashMap
+import javax.inject.Inject
 
-class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdapter() {
+class MyExpandableListViewAdapter2(var context: Context) : BaseExpandableListAdapter() {
 
+    private var parentText: TextView? =null
     var PList: Array<String?>? =null
 
     var datasets: HashMap<String, List<Cinema>>? = null
@@ -23,8 +27,6 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
     internal var totalPrice = 0.00
     val EDITING = "编辑"
     val FINISH_EDITING = "完成"
-
-    internal var onAllCheckedBoxNeedChangeListener: OnAllCheckedBoxNeedChangeListener? = null
 
     //  获得某个父项的某个子项
     override fun getChild(parentPos: Int, childPos: Int): Any {
@@ -35,7 +37,7 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
     fun setDate(mPList: Array<String?>?,mdatasets: HashMap<String, List<Cinema>>){
         PList = mPList
         datasets = mdatasets
-        notifyDataSetChanged()
+       // notifyDataSetChanged()
 
     }
 
@@ -83,22 +85,21 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
         var view = view
         if (view == null) {
             val inflater = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = inflater.inflate(R.layout.item_shopping_car_group, null)
+            view = inflater.inflate(R.layout.elv_cinema_list_item_cityproper, null)
         }
-        var parentText = view!!.findViewById<AppCompatTextView>(R.id.tv_store_name)
-        var selectCheckBox = view!!.findViewById<CheckBox>(R.id.id_cb_select_all)
-
-
-        selectCheckBox.isChecked = true
-
-
-        selectCheckBox.setOnClickListener {
-
-
-
+        view!!.setTag(R.layout.elv_cinema_list_item_cityproper, parentPos)
+        view.setTag(R.layout.elv_cinema_list_item_cinema, -1)
+        parentText = view.findViewById<View>(R.id.parent_title) as TextView
+        val parent_img = view.findViewById<ImageView>(R.id.parent_img)
+        //            设置展开和收缩的文字颜色
+        if (b) {
+            parentText!!.setTextColor(Color.parseColor("#2FD0B5"))
+            parent_img.setImageResource(R.drawable.star_yellow)
+        } else {
+            parentText!!.setTextColor(Color.BLACK)
+            parent_img.setImageResource(R.drawable.star_grey)
         }
         parentText!!.text = PList!![parentPos]
-
         return view
     }
 
@@ -107,33 +108,15 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
         var view = view
         if (view == null) {
             val inflater =context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            view = inflater.inflate(R.layout.item_shopping_car_child, null)
+            view = inflater.inflate(R.layout.elv_cinema_list_item_cinema, null)
         }
-
-        val text = view!!.findViewById<View>(R.id.tv_name) as AppCompatTextView
-        val textView = view.findViewById<AppCompatTextView>(R.id.tv_price_key)
-       // text.setText(this!!.datasets!![PList!![parentPos]]!!.get(childPos).cinema_name)
-        text.setText("开发过程中，按照设计尺寸做好页面，当用户自定义自己的手机字体大小之后UI完全没法看了，这个时候就在想让app字体")
-       // textView.setText(this!!.datasets!![PList!![parentPos]]!!.get(childPos).cinema_address)
-        textView.setText("33.00")
-
-        view.setOnClickListener {
-            Toast.makeText(context, "商品：" + parentPos.toString()+childPos.toString(), Toast.LENGTH_SHORT).show()
-        }
-
-        text.setOnClickListener{
-
-        }
+        view!!.setTag(R.layout.elv_cinema_list_item_cityproper, parentPos)
+        view.setTag(R.layout.elv_cinema_list_item_cinema, childPos)
+        val text = view.findViewById<View>(R.id.child_title) as TextView
+        val textView = view.findViewById<TextView>(R.id.child_message)
+        text.setText(this!!.datasets!![PList!![parentPos]]!!.get(childPos).cinema_name)
+        textView.setText(this!!.datasets!![PList!![parentPos]]!!.get(childPos).cinema_address)
         return view
-    }
-
-
-    interface OnAllCheckedBoxNeedChangeListener {
-        fun onCheckedBoxNeedChange(allParentIsChecked: Boolean)
-    }
-
-    fun setOnAllCheckedBoxNeedChangeListener(onAllCheckedBoxNeedChangeListener: OnAllCheckedBoxNeedChangeListener) {
-        this.onAllCheckedBoxNeedChangeListener = onAllCheckedBoxNeedChangeListener
     }
 
     //  子项是否可选中，如果需要设置子项的点击事件，需要返回true

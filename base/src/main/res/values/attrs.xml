@@ -12,4 +12,24 @@
         <attr name="labelText" format="string"/>
         <attr name="contentText" format="string"/>
     </declare-styleable>
+
+
+    <!--边框的view，可以是 RelativeLayout 或 LinearLayout -->
+    <declare-styleable name="BorderViewLayout">
+        <!--边框的粗度-->
+        <attr name="borderStrokeWidth" format="float"/>
+        <!--边框颜色-->
+        <attr name="borderColor" format="color"/>
+        <!--底边边线左边断开距离-->
+        <attr name="borderBottomLeftBreakSize" format="dimension"/>
+        <!--底边边线右边断开距离-->
+        <attr name="borderBottomRightBreakSize" format="dimension"/>
+        <!--是否需要上边框-->
+        <attr name="needTopBorder" format="boolean"/>
+        <!--是否需要左右边框-->
+        <attr name="needLeftAndRigtBorder" format="boolean"/>
+        <!--是否需要下边框-->
+        <attr name="needBottomBorder" format="boolean"/>
+    </declare-styleable>
 </resources>
+

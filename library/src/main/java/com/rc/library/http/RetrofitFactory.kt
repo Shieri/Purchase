@@ -3,6 +3,8 @@ package com.library
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer
 import com.rc.library.BuildConfig
+import com.rc.library.http.JsonUtils
+import com.rc.library.http.LenientGsonConverterFactory
 
 import java.security.SecureRandom
 import java.security.cert.CertificateException
@@ -21,6 +23,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.LineNumberReader
 
 
 open class RetrofitFactory {
@@ -94,7 +97,6 @@ open class RetrofitFactory {
             //设置baseUrl
             .baseUrl(url)
             //添加转换器Converter(将json 转为JavaBean)，用来进行响应数据转化(反序列化)的ConvertFactory
-           // .addConverterFactory(GsonConverterFactory.create(JsonUtils.getJson()))
             .addConverterFactory(GsonConverterFactory.create())
             //添加自定义转换器
             //.addConverterFactory(buildGsonConverterFactory())
