@@ -10,6 +10,7 @@ import android.widget.CheckBox
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatTextView
 import com.rc.goods.R
+import com.rc.goods.model.Cart
 import com.rc.goods.model.Cinema
 import java.util.HashMap
 
@@ -18,6 +19,8 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
     var PList: Array<String?>? =null
 
     var datasets: HashMap<String, List<Cinema>>? = null
+
+    var dates: List<Cart>? = null
 
     internal var totalCount = 0
     internal var totalPrice = 0.00
@@ -32,35 +35,41 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
     }
 
 
-    fun setDate(mPList: Array<String?>?,mdatasets: HashMap<String, List<Cinema>>){
+    fun setDate(
+        mPList: Array<String?>?,
+        mdatasets: HashMap<String, List<Cinema>>,
+        dates: List<Cart>
+    ){
         PList = mPList
         datasets = mdatasets
+        this.dates = dates
         notifyDataSetChanged()
 
     }
 
     //  获得父项的数量
     override fun getGroupCount(): Int {
-        if (datasets == null) {
-
+        if (dates == null) {
             return 0
         }
 
         Log.d("myex",datasets!!.size.toString())
-        return datasets!!.size
+        return dates!!.size
     }
 
     //  获得某个父项的子项数目
     override fun getChildrenCount(parentPos: Int): Int {
-        if (this!!.datasets!![PList!![parentPos]] == null) {
+        if (this!!.dates!![parentPos].cinemas == null) {
             return 0
         }
-        return this!!.datasets!![PList!![parentPos]]!!.size
+       // return this!!.datasets!![PList!![parentPos]]!!.size
+        return this!!.dates!![parentPos].cinemas.size
     }
 
     //  获得某个父项
     override fun getGroup(parentPos: Int): Any {
-        return this!!.datasets!![PList!![parentPos]]!!
+       // return this!!.datasets!![PList!![parentPos]]!!
+        return this!!.dates!![parentPos]
     }
 
     //  获得某个父项的id
@@ -89,7 +98,7 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
         var selectCheckBox = view!!.findViewById<CheckBox>(R.id.id_cb_select_all)
 
 
-        selectCheckBox.isChecked = true
+        selectCheckBox.isChecked = dates!!.get(parentPos).isChecked
 
 
         selectCheckBox.setOnClickListener {
@@ -97,7 +106,7 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
 
 
         }
-        parentText!!.text = PList!![parentPos]
+        parentText!!.text = dates!![parentPos].area_name
 
         return view
     }

@@ -1,23 +1,15 @@
 package com.rc.goods.ui.fragment
 
 import android.content.Context
-import android.os.Bundle
-import android.os.Looper
-import android.util.Log
 import android.view.View
 import android.widget.AdapterView
-import android.widget.CheckBox
 import android.widget.ExpandableListView
 import android.widget.Toast
-import com.alibaba.fastjson.JSON
 import com.rc.base.mvp.BaseFragment
-import com.rc.base.mvp.BaseLazyFragment
 import com.rc.goods.R
 import com.rc.goods.contract.CartContract
 import com.rc.goods.model.Cart
-import com.rc.goods.model.ChildEntity
 import com.rc.goods.model.Cinema
-import com.rc.goods.model.ParentEntity
 import com.rc.goods.presenter.CartPresenter
 import com.rc.goods.ui.adapter.MyExpandableListViewAdapter
 import kotlinx.android.synthetic.main.cart_frg.*
@@ -25,7 +17,6 @@ import kotlinx.android.synthetic.main.foot_layout.*
 import java.util.ArrayList
 import java.util.HashMap
 import javax.inject.Inject
-import com.google.gson.Gson
 
 
 class CartFragment @Inject constructor():BaseFragment(),CartContract.View{
@@ -101,7 +92,7 @@ class CartFragment @Inject constructor():BaseFragment(),CartContract.View{
                 datasets.put(PList!![i]!!,dates!!.get(i).cinemas!!)
             }
         }
-        mAdapter!!.setDate(PList,datasets)
+        mAdapter!!.setDate(PList,datasets,dates)
 
         mExpandableListView.setAdapter(mAdapter)
 

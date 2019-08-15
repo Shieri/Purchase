@@ -1,40 +1,20 @@
 [{"id": 117,
-  "area_name": "昌平区",
+  "area_name": "寻天果蔬",
   "isChecked": true,
   "cinemas": [{
-    "id": "1", "cinema_name": "DMC昌平保利影剧院","cinema_address": "昌平区鼓楼南街佳莲时代广场4楼","area_id": "117","area_name": "昌平区","logo": "http://img.komovie.cn/cinema/14205106672446.jpg"
+    "id": "2",
+    "name": "寻天果蔬 红心芭乐 番石榴新鲜水果 2.5kg 精装",
+    "price": 27.90,
+    "count": 2,
+    "isChecked": true,
+    "image": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565840680834&di=d5bb938a9c0c75bbda57adb1de96972a&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheying%2F20160923%2Fdenglongguo_7158219.jpg"
   }, {
     "id": "2",
-    "cinema_name": "保利国际影城-龙旗广场店",
-    "cinema_address": "昌平区黄平路19号院3号楼龙旗购物中心3楼",
-    "area_id": "117",
-    "area_name": "昌平区",
-    "logo": "http://img.komovie.cn/cinema/14203529883434.jpg"
-  }]
-}, {
-  "id": 109,
-  "area_name": "朝阳区",
-  "cinemas": [{
-    "id": "7",
-    "cinema_name": "北京剧院",
-    "cinema_address": "朝阳区安慧里三区10号",
-    "area_id": "109",
-    "area_name": "朝阳区",
-    "logo": "http://img.komovie.cn/cinema/14207675478321.jpg"
-  }, {
-    "id": "8",
-    "cinema_name": "朝阳剧场",
-    "cinema_address": "朝阳区东三环北路36号",
-    "area_id": "109",
-    "area_name": "朝阳区",
-    "logo": "http://img.komovie.cn/cinema/14203512065410.jpg"
-  }, {
-    "id": "10",
-    "cinema_name": "劲松电影院",
-    "cinema_address": "朝阳区劲松中街404号",
-    "area_id": "109",
-    "area_name": "朝阳区",
-    "logo": "http://img.komovie.cn/cinema/14213800192810.jpg"
+    "name": "寻天果蔬 东北菇娘果 灯笼果 姑娘果 新鲜水果 约1kg 精装款",
+    "price": 19.80,
+    "count": 5,
+    "isChecked": true,
+    "image": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565840680834&di=d5bb938a9c0c75bbda57adb1de96972a&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheying%2F20160923%2Fdenglongguo_7158219.jpg"
   }]
 }, {
   "id": 110,

@@ -1,9 +1,11 @@
 package com.rc.goods.model
 
 data class Cart(
+
     val area_name: String,
     val cinemas: List<Cinema>,
-    val id: Int
+    val id: Int,
+    val isChecked: Boolean
 )
 
 data class Cinema(
