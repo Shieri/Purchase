@@ -100,9 +100,6 @@ class CartFragment @Inject constructor():BaseFragment(),CartContract.View{
             list.filter {it.isChecked}
                 .mapTo(cartIdList) {it.id }
 
-
-
-
            if (cartIdList.size == 0) {
                 toast("请选择需要删除的商品")
             }else {
@@ -112,6 +109,7 @@ class CartFragment @Inject constructor():BaseFragment(),CartContract.View{
                }
 
            }
+
         }
 
 

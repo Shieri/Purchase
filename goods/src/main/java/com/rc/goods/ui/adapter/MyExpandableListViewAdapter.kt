@@ -126,6 +126,8 @@ class MyExpandableListViewAdapter(var context: Context) : BaseExpandableListAdap
         logo.loadUrl(model.image)
         text.setText(model.name)
         textView.setText(model.price.toString())
+
+
         mGoodsCountBt.setCurrentNumber(model.count)
 
         view.setOnClickListener {

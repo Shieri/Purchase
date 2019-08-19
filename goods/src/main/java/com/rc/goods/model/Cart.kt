@@ -8,8 +8,8 @@ data class Cart(
 )
 
 data class Child(
-    var count: Int,
-    val id: String,
+    var coun: Int,
+    val id: Int,
     val image: String,
     var isChecked: Boolean,
     val name: String,
