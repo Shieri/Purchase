@@ -3,14 +3,14 @@
   "parentName": "寻天果蔬",
   "isChecked": true,
   "child": [{
-    "id": "2",
+    "id": 2,
     "name": "寻天果蔬 红心芭乐 番石榴新鲜水果 2.5kg 精装",
     "price": 27.90,
     "count": 2,
     "isChecked": true,
     "image": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565840680834&di=d5bb938a9c0c75bbda57adb1de96972a&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheying%2F20160923%2Fdenglongguo_7158219.jpg"
   }, {
-    "id": "3",
+    "id": 3,
     "name": "寻天果蔬 东北菇娘果 灯笼果 姑娘果 新鲜水果 约1kg 精装款",
     "price": 19.80,
     "count": 5,
@@ -22,17 +22,17 @@
   "parentName": "鲜觉旗舰店",
   "isChecked": false,
   "child": [{
-    "id": "4",
+    "id": 4,
     "name": "精选美国进口车厘子 JJJJ级大樱桃精选大果 果径32-34mm 京东或顺丰空运发货 1kg礼盒装",
     "price": 199.00,
     "count": 3,
     "isChecked": false,
     "image": "https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D480/sign=bb5c65e6be12c8fcb4f3f7c5cc0192b4/83025aafa40f4bfb323a8992044f78f0f6361809.jpg"
   }, {
-    "id": "5",
+    "id": 5,
     "name": "美国进口车厘子现货2斤新鲜水果黑珍珠9.5R双J樱桃顺丰非智利",
     "price": 179.00,
-    "count": 1,
+    "count": 4,
     "isChecked": true,
     "image": "https://5b0988e595225.cdn.sohucs.com/images/20170803/d14c391f0d374e139f393f12e0fe3969.jpeg"
   }]

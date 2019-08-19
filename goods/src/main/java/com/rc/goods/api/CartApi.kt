@@ -1,7 +1,6 @@
 package com.rc.goods.api
 
 import com.rc.goods.model.Cart
-import com.rc.goods.model.cc
 import io.reactivex.Observable
 import retrofit2.http.GET
 

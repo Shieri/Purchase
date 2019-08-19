@@ -2,6 +2,7 @@ package com.rc.base
 
 import android.app.Application
 import android.content.Context
+import androidx.multidex.MultiDex
 import com.rc.base.injection.component.AppComponent
 import com.rc.base.injection.component.DaggerAppComponent
 import com.rc.base.injection.module.AppModule
@@ -17,6 +18,12 @@ open class BaseApplication: Application() {
 
         context = this
 
+    }
+
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
     }
 
     /*
